@@ -5,8 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./output.css">
     <title>Snake Game</title>
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
-<body>
-    
+<body class="bg-black text-yellow-200 font-mono p-12 size-full">
+    <main class="size-full flex flex-col gap-2">
+            <div class="infos flex place-content-between text-3xl">
+                <div class="info1 border border-yellow-200  p-5 rounded-xl">
+                    High Score: <span id="high-score">0</span>
+                </div>
+                <div class="info2 border border-yellow-200  p-5 rounded-xl">
+                    Score: <span id="score">0</span>
+                </div>
+                <div class="info3 border border-yellow-200  p-5 rounded-xl">
+                    Time: <span id="time">00:00</span>
+                </div>
+            </div>
+            <div class="board size-full grow border border-yellow-200  p-5 rounded-xl flex justify-center items-center">
+                    BOARD
+            </div>
+    </main>
 </body>
 </html>
