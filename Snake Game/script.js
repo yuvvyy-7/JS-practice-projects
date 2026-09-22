@@ -22,7 +22,10 @@ let food = {
     x: Math.floor(Math.random()*rows), y: Math.floor(Math.random()*cols)
 }
 let score = 0;
-let highScore = JSON.parse(localStorage.getItem('gameData')).score || 0;
+
+const gameData = JSON.parse(localStorage.getItem('gameData')) || {};
+let highScore = gameData.score || 0;
+
 let time = `00-00`;
 
 document.querySelector('#high-score').innerHTML = `${highScore}`;
