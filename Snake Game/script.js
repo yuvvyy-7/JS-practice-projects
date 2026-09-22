@@ -4,8 +4,8 @@ const restartButton = document.querySelector('.restart-button');
 const startScreen = document.querySelector('.start');
 const gameOverScreen = document.querySelector('.game-over');
 
-const blockHeight = 30;
-const blockWidth = 30;
+const blockHeight = 45;
+const blockWidth = 45;
 
 const cols = Math.floor(board.clientWidth / blockWidth);
 const rows = Math.floor(board.clientHeight / blockHeight);
@@ -33,7 +33,7 @@ for(let row = 0; row < rows; row++) {
     for(let col = 0; col < cols; col++) {
         const block = document.createElement('div');
         block.classList.add("block");
-        block.classList.add('border', 'border-white', 'rounded-2xl');
+        block.classList.add('border', 'border-white', 'rounded-4xl');
         board.appendChild(block);
 
         blocks[`${row}-${col}`] = block;
@@ -126,7 +126,7 @@ startButton.addEventListener('click', () => {
     intervalId = setInterval(() => {
     render();
 
-    }, 100); 
+    }, 200); 
 
     timeIntervalId = setInterval(() => {
         let [ min, sec ] = time.split("-").map(Number);
@@ -163,7 +163,7 @@ function restartGame() {
     intervalId = setInterval(() => {
     
     render();
-    }, 100); 
+    }, 200); 
 }
 
 restartButton.addEventListener('click', restartGame);
